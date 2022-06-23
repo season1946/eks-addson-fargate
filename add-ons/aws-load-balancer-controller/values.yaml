@@ -1,3 +1,9 @@
 aws-load-balancer-controller:
   serviceAccount: 
     create: false 
+  image:
+    repository: 602401143452.dkr.ecr.us-east-1.amazonaws.com/amazon/aws-load-balancer-controller
+    tag: v2.4.2
+    pullPolicy: IfNotPresent
+  region: us-east-1
+  vpcId: vpc-03e3acb23d14eb252
