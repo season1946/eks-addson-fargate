@@ -25,6 +25,8 @@ spec:
       {{ if .Values.prometheus.ampWorkspaceUrl }}
       - name: prometheus.server.remoteWrite[0].url
         value: {{ .Values.prometheus.ampWorkspaceUrl }}
+      - name: prometheus.server.resources.requests.cpu
+        value: 2000m
       - name: prometheus.server.remoteWrite[0].sigv4.region
         value: {{ .Values.region }}
       {{ end }}
