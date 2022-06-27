@@ -69,7 +69,7 @@ server:
     ##
     evaluation_interval: 1m
     
-  resources: {}
+  resources:
     limits:
       cpu: 2000m
     requests:
