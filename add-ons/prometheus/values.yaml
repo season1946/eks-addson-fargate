@@ -58,7 +58,16 @@ alertmanager:
 
 server:
   ## Prometheus server container name
-
+  global:
+    ## How frequently to scrape targets by default
+    ##
+    scrape_interval: 5m
+    ## How long until a scrape request times out
+    ##
+    scrape_timeout: 1m
+    ## How frequently to evaluate rules
+    ##
+    evaluation_interval: 1m
 
   persistentVolume:
     ## If true, Prometheus server will create/use a Persistent Volume Claim
