@@ -68,7 +68,13 @@ server:
     ## How frequently to evaluate rules
     ##
     evaluation_interval: 1m
-
+    
+  resources: {}
+    limits:
+      cpu: 2000m
+    requests:
+      cpu: 2000m
+      
   persistentVolume:
     ## If true, Prometheus server will create/use a Persistent Volume Claim
     ## If false, use emptyDir
